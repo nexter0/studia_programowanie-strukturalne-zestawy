@@ -1,0 +1,3 @@
+D:/GitHub/ProgramowanieStrukturalne_Zestawy/Zestaw_1/Z1/cmake-build-debug/CMakeFiles/Z1.dir
+D:/GitHub/ProgramowanieStrukturalne_Zestawy/Zestaw_1/Z1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/GitHub/ProgramowanieStrukturalne_Zestawy/Zestaw_1/Z1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
