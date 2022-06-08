@@ -1,16 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-float mean(int n, int m, float tab[n][m]);
+float tddiagMean(int n, int m, float **tab);
+
+float** arrtdCreate(int n, int m)
+{
+    float** tab = (float**)malloc(sizeof(float*) * n);
+    for(int i = 0; i < n ; i++)
+    {
+        *(tab + i) = (float*)malloc(sizeof(float) * m);
+    }
+    return tab;
+}
 
 int main() {
-    float tab[3][5] = {{1.41, 5.01, 0.04, 6.47, 7.56},
-                       {4.54, 5.15, 7.24, 3.58, 6.11},
-                       {0.05, 0.87, 0.99, 6.12, 7.94}};
-    printf("Srednia na przekatnej: %lf\n", mean(3,5, tab));
+    float** tablica = arrtdCreate(2,2);
+    *(*(tablica+0)+0) = 4.56;
+    *(*(tablica+0)+1) = 2.97;
+    *(*(tablica+1)+0) = 3.01;
+    *(*(tablica+1)+1) = 0.58;
+    printf("Srednia na przekatnej: %lf\n", tddiagMean(2,2, tablica));
     return 0;
 }
 
-float mean(int n, int m, float tab[n][m])
+float tddiagMean(int n, int m, float **tab)
 {
     float sum = 0;
     int counter = 0;
