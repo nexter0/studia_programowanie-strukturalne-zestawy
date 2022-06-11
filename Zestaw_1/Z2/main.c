@@ -16,9 +16,16 @@ int czySumaNpar(int n, const int tab1[], const int tab2[])
     int s2 = 0;
     for(int i = 0; i < n; i++)
     {
-        if(tab1[i] % 2)
+        int temp = tab[i];
+            if(temp < 0)
+                temp *= -1;
+        if(temp % 2)
             s1 += tab1[i];
-        if(tab2[i] % 2)
+        
+        int temp = tab2[i];
+            if(temp < 0)
+                temp *= -1;
+        if(temp % 2)
             s2 += tab2[i];
     }
     if (s1 == s2)
